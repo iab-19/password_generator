@@ -49,7 +49,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
 
-  // var password = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
   var numOfCharacters;
   var includeLowerCase;
@@ -91,6 +91,14 @@ function writePassword() {
     alert("You have chosen to include special characters");
   } else {
     alert("You have chosen to ommit special characters");
+  }
+
+  generatePassword() = {
+    // Creating arrays that include number, uppercase letters, lowercase letter and special characters
+    var num = '0123456789';
+    var upper = 'ABCDEFGHIJKLMNOPQRSTUVQXYZ';
+    var lower = 'abcdefghijklmnopqrstuvwxyz';
+    var spec = ' !"#$%&()*+,-./:;<=>?@[]\{}~`|^_';
   }
 
 }
