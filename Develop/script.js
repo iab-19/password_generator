@@ -26,6 +26,23 @@ when button is pressed:
 
 */
 
+// Asks the user the number of characters required for the password and saves the answer
+// and makes sure the number is valid (between 8 and 128 characters)
+function correctNumber() {
+  //
+  var validNumber = 0;
+  while (validNumber == 0) {
+   numOfCharacters = prompt("How many Characters do you want your password to have? \nMust be between 8 and 128 characters.");
+   if (numOfCharacters >= 8 && numOfCharacters <= 128) {
+     alert("Your password will have " + numOfCharacters + " characters.");
+     validNumber = 1;
+   } else {
+   alert("Please enter a number between 8 and 128");
+   }
+ }
+
+}
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -42,9 +59,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-  // Asks the user the number of characters required for the password and saves the answer
-  numOfCharacters = prompt("How many Characters do you want your password to have? \nMust be between 8 and 128 characters.");
-  alert("Your password will have " + numOfCharacters + " characters.");
+  correctNumber();
 
   // Asks if the user wants to include lowercase characters and saves the answer
   includeLowerCase = confirm("Do you want to include lowercase characters?");
