@@ -126,19 +126,30 @@ function writePassword() {
   function generatePassword() {
 
     // create an empty array with the size of the password
+    /*
+    My idea here was to create an empty array and iterate over the
+    number of characters the user has included('numOfCharacters') and add
+    a random letter from a specific array if the user decided to include
+    that criteria in their password. The code does not give any errors in the browser
+    but it does not work.
+     */
     var password = [];
     for (var i = 0; i < numOfCharacters; i++) {
       if (includeLowerCase == true){
         password.push(chooseLower());
+        i++;
       }
       if (includeUpperCase == true) {
         password.push(chooseUpper());
+        i++;
       }
       if (includeNumber == true) {
         password.push(chooseNum());
+        i++;
       }
       if (includeSpecial) {
         password.push(chooseSpec());
+        i++;
       }
     }
     passwordText.value = password.join('');
