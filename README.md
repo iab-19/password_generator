@@ -22,7 +22,9 @@ WHEN all prompts are answered
 THEN a password is generated  
 THEN the password is either displayed in an alert or written to the page
 
-
+  
+    
+Screenshot of application:
 ![Screenshot (30)](https://github.com/iab-19/password_generator/assets/132946236/9f05e3a3-824f-49de-95d7-96df4caeab8e)
 
 
